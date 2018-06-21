@@ -1,0 +1,6 @@
+C:\Users\Utilisateur\source\repos\Heure\API\bin\Debug\API.exe.config
+C:\Users\Utilisateur\source\repos\Heure\API\bin\Debug\API.exe
+C:\Users\Utilisateur\source\repos\Heure\API\bin\Debug\API.pdb
+C:\Users\Utilisateur\source\repos\Heure\API\obj\Debug\API.csproj.CoreCompileInputs.cache
+C:\Users\Utilisateur\source\repos\Heure\API\obj\Debug\API.exe
+C:\Users\Utilisateur\source\repos\Heure\API\obj\Debug\API.pdb

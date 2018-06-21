@@ -1,0 +1,5 @@
+C:\Users\Utilisateur\source\repos\Heure\LibMetro\bin\Debug\LibMetro.dll
+C:\Users\Utilisateur\source\repos\Heure\LibMetro\bin\Debug\LibMetro.pdb
+C:\Users\Utilisateur\source\repos\Heure\LibMetro\obj\Debug\LibMetro.csproj.CoreCompileInputs.cache
+C:\Users\Utilisateur\source\repos\Heure\LibMetro\obj\Debug\LibMetro.dll
+C:\Users\Utilisateur\source\repos\Heure\LibMetro\obj\Debug\LibMetro.pdb
