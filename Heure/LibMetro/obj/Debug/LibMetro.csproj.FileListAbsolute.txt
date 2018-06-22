@@ -3,3 +3,7 @@ C:\Users\Utilisateur\source\repos\Heure\LibMetro\bin\Debug\LibMetro.pdb
 C:\Users\Utilisateur\source\repos\Heure\LibMetro\obj\Debug\LibMetro.csproj.CoreCompileInputs.cache
 C:\Users\Utilisateur\source\repos\Heure\LibMetro\obj\Debug\LibMetro.dll
 C:\Users\Utilisateur\source\repos\Heure\LibMetro\obj\Debug\LibMetro.pdb
+C:\Users\Utilisateur\source\repos\Heure\LibMetro\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Utilisateur\source\repos\Heure\LibMetro\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Utilisateur\source\repos\Heure\LibMetro\obj\Debug\LibMetro.csprojAssemblyReference.cache
+C:\Users\Utilisateur\source\repos\Heure\LibMetro\obj\Debug\LibMetro.csproj.CopyComplete
