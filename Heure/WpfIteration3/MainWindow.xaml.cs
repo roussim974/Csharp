@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using LibMetro;
+using Microsoft.Maps.MapControl.WPF;
 using Newtonsoft.Json;
 
 namespace WpfIteration3
@@ -22,13 +23,18 @@ namespace WpfIteration3
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
+            
+
             InitializeComponent();
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            mapBing.Children.Clear();
             var Lat = lat.Text;
             var Lon = lon.Text;
             var Rayon = rayon.Text;
@@ -43,12 +49,18 @@ namespace WpfIteration3
             foreach (BusStop busStop in noDoublon)
             {
                 listBusStop.Items.Add(busStop.name);
+
                 //Console.Write(busStop.id + busStop.name + busStop.lon + busStop.lat);
 
                 foreach (string line in busStop.lines)
                 {
 
+                    Pushpin pushpin = new Pushpin();
+                    Location location = new Location(busStop.lat, busStop.lon);
+                    pushpin.Location = location;
+                    mapBing.Children.Add(pushpin);
                     listLines.Items.Add(line);
+                    
                     //Console.WriteLine(line);
                 }
 
@@ -56,7 +68,16 @@ namespace WpfIteration3
             //Console.Read();
         }
 
-        private void lat_TextChanged(object sender, TextChangedEventArgs e)
+
+        private void ListBusStop_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+           
+            //var z = listBusStop.SelectedItem;
+
+            
+        }
+
+        private void lon_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }
