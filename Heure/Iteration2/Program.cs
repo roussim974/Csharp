@@ -1,16 +1,9 @@
-﻿using Newtonsoft.Json;
+﻿
 using System;
 using System.Collections.Generic;
-//using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-//using System.Linq;
-using System.Net;
-//using System.Text;
-//using System.Threading.Tasks;
-//using System.Web;
-//using Newtonsoft.Json;
 using LibMetro;
+using Newtonsoft.Json;
 
 namespace Iteration2
 {
@@ -19,18 +12,21 @@ namespace Iteration2
         static void Main(string[] args)
         {
 
-            List<BusStop> busStops = Metro.BusStopProximity();
-            foreach (BusStop busStop in busStops)
+            Metro metro = new Metro();
+
+            List<BusStop> donnees = JsonConvert.DeserializeObject<List<BusStop>>(metro.getMetro("http://data.metromobilite.fr/api/linesNear/json?x=5.704708&y=45.205311&dist=1600&details=false"));
+
+            List<BusStop> noDoublon = donnees.GroupBy(u => u.name).Select(grp => grp.First()).ToList();
+
+            foreach (BusStop busStop in noDoublon)
             {
                 Console.Write(busStop.id + busStop.name + busStop.lon + busStop.lat);
- /*               Console.WriteLine(donnee.name);
-                Console.WriteLine(donnee.lon);
-                Console.WriteLine(donnee.lat); */
+
                 foreach (string line in busStop.lines)
                 {
                     Console.WriteLine(line);
                 }
-                //Console.WriteLine(donnee.lines);
+
             }
             Console.Read();
         }

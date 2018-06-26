@@ -12,10 +12,10 @@ namespace LibMetro
     public class Metro
     {
         
-        public static List<BusStop> BusStopProximity()
+        public string getMetro (string url)
         {
             // Create a request for the URL.   
-            WebRequest request = WebRequest.Create("http://data.metromobilite.fr/api/linesNear/json?x=5.704708&y=45.205311&dist=1600&details=false");
+            WebRequest request = WebRequest.Create(url);
 
             // Get the response.  
             WebResponse response = request.GetResponse();
@@ -27,13 +27,6 @@ namespace LibMetro
             StreamReader reader = new StreamReader(dataStream);
             // Read the content.  
             string responseFromServer = reader.ReadToEnd();
-            // Display the content.  
-            //Console.WriteLine(responseFromServer);
-
-            List<BusStop> donnees = JsonConvert.DeserializeObject<List<BusStop>>(responseFromServer);
-
-            List<BusStop> noDoublon = donnees.GroupBy(u => u.name).Select(grp => grp.First()).ToList();
-
 
             // Clean up the streams and the response. 
             
@@ -41,7 +34,7 @@ namespace LibMetro
             response.Close();
 
 
-            return noDoublon;
+            return responseFromServer;
         } 
         
 

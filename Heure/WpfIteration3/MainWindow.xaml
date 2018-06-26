@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfIteration3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfIteration3"
+        mc:Ignorable="d"
+        Title="Metro Boulot Dodo" Height="618.067" Width="800">
+    <Grid Margin="0,0,0,3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="247*"/>
+            <ColumnDefinition Width="149*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF8ADFFF" Offset="0.8"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Label Content="Latitude" HorizontalAlignment="Left" Margin="43,65,0,0" VerticalAlignment="Top" Width="73" Background="#FFF0DDDD"/>
+        <Label Content="Longitude" HorizontalAlignment="Left" Margin="43,113,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.007,0.419" Width="73" Background="#FFF0DDDD"/>
+        <Button Content="Valider" HorizontalAlignment="Left" Margin="228,221,0,0" VerticalAlignment="Top" Width="110" Click="Button_Click" Height="33"/>
+        <TextBox x:Name="lat" HorizontalAlignment="Left" Height="26" Margin="198,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.483,-0.603" TextChanged="lat_TextChanged" Text="45.176494"/>
+        <TextBox x:Name="lon" HorizontalAlignment="Left" Height="26" Margin="198,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.483,-0.603" Text="5.709360"/>
+        <Label  HorizontalAlignment="Left" Margin="43,161,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.007,0.419" Width="73" Background="#FFF0DDDD" Height="26" Content="Rayon"/>
+        <TextBox x:Name="rayon" HorizontalAlignment="Left" Height="26" Margin="198,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" RenderTransformOrigin="0.483,-0.603" Text="1200"/>
+        <TextBlock HorizontalAlignment="Left" Margin="198,0,0,0" TextWrapping="Wrap" Text="Transport commun Assist" VerticalAlignment="Top" Height="60" Width="400" FontSize="36" Foreground="#FFE61515" Grid.ColumnSpan="2"/>
+        <ListBox x:Name="listBusStop" HorizontalAlignment="Left" Height="203" Margin="364,78,0,0" VerticalAlignment="Top" Width="398" Binding.SourceUpdated="Button_Click" Grid.ColumnSpan="2"/>
+        <Label Content="Arret" HorizontalAlignment="Left" Margin="364,47,0,0" VerticalAlignment="Top" Width="184" Grid.ColumnSpan="2"/>
+        <ListBox x:Name="listLines" HorizontalAlignment="Left" Height="228" Margin="364,317,0,0" VerticalAlignment="Top" Width="398" Binding.SourceUpdated="Button_Click" Grid.ColumnSpan="2"/>
+        <Label Content="Lignes" HorizontalAlignment="Left" Margin="364,286,0,0" VerticalAlignment="Top" Width="184" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>
