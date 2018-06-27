@@ -1,0 +1,20 @@
+﻿<Window x:Class="MVVM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MVVM"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="800">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="519" VerticalAlignment="Top" Width="792" RenderTransformOrigin="0.544,0.529">
+            <TabItem Header="Users">
+                <Frame Source="Views/UserView.xaml" Margin="0,0,0,-115" Height="500" VerticalAlignment="Top"/>
+            </TabItem>
+            <TabItem Header="Messages">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
